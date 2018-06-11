@@ -147,8 +147,11 @@ img {
         a:hover{
         color:red;
         }
+        a:hover #hidemenu{
+           display:block;
+        }
        #hidemenu{
-          padding:10px 0px;
+         padding:10px 0px;
          width: 630px;
         height: 315px;
         display:none;
