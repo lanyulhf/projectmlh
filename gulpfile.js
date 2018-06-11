@@ -7,7 +7,7 @@ var sass = require("gulp-sass");
 //var babel = require("gulp-babel");
 //sass编译
 gulp.task("sassfile",function(){
-	gulp.src(["scss/index.scss"])
+	gulp.src(["scss/*.scss"])
 	.pipe(sass())
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\css"));
 });
