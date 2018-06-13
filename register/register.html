@@ -1,12 +1,126 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>注册页面</title>
-		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
 	<link rel="stylesheet" type="text/css" href="css/register.css"/>
-	</head>
-	<body>
-		电饭锅的广泛地
-	</body>
+</head>
+<body>
+<!--headerBot-->
+<div id="headerBot">
+	<div id="headerBotIn">
+		<ul class="headerBotInLeft">
+			<li><img src="img/log.png" alt="图片" /></li>
+			<li><a href="">全球奢品</a></li>
+			<li><a href="">正品保证</a></li>
+		</ul>	
+	</div>
+</div>
+<div id="background">
+	<div id="regin">
+		<div id="reginIn">
+			<span  onclick="show(1)">手机登陆</span><span onclick="show(2)">账户登录</span>
+		<input id="phoneNum" type="text" placeholder="请输入手机号码">
+		<p id="check">
+			<input id="checkNum" type="text" placeholder="请输入验证码">
+			<a href="#" id="checkBtn">获取验证码</a>
+		</p>
+		<a href="#" id="login">登录</a>
+		<h3 id="reg"><a href="#" >立即注册</a><div class="arrow"></div></h3>
+		<div class="bottom">
+			<div class="otherMet">
+			<div class="graybg"></div>
+			<h3>其他支付方式</h3>
+			<div class="graybg"></div>
+			</div>
+			
+			<p id="link">
+				<a href="#"><img src="img/tao.png" alt="图片" /></i></a>
+				<a href="#"><i class="iconfont icon-zhifubao"></i></a>
+				<a href="#"><i class="iconfont icon-weixin"></i></a>
+				<a href="#"><i class="iconfont icon-weibo"></i></a>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="regin">
+		<div id="reginIn">
+			<span onclick="show(1)">手机登陆</span><span onclick="show(2)">账户登录</span>
+		<input id="phoneNum" type="text" placeholder="请输入手机号码">
+		<p id="check">
+			<input id="checkPassword" type="text" placeholder="请输入密码">
+			<a class="aLeft" href="#"><span></span>下次自动登录</a><a class="aRight" href="#">忘记密码？</a>
+		</p>
+		<a href="#" id="login">登录</a>
+		<h3 id="reg"><a href="#" >立即注册</a><div class="arrow"></div></h3>
+		<div class="bottom">
+			<div class="otherMet">
+			<div class="graybg"></div>
+			<h3>其他支付方式</h3>
+			<div class="graybg"></div>
+			</div>		
+			<p id="link">
+				<a href="#"><img src="img/tao.png" alt="图片" /></i></a>
+				<a href="#"><i class="iconfont icon-zhifubao"></i></a>
+				<a href="#"><i class="iconfont icon-weixin"></i></a>
+				<a href="#"><i class="iconfont icon-weibo"></i></a>
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+<div id="footer">
+	<div id="footerIn">
+		<ul id="footerinfo">
+			<li><a href="#"><i class="iconfont icon-shixintaoxin"></i>100%正品保证</a></li>
+			<li><a href="#"><i class="iconfont icon-wuliukuaidiche"></i>满688免运费</a></li>
+			<li><a href="#"><i class="iconfont icon-7tiantuihuo"></i>7天无条件退货</a></li>
+			<li><a href="#"><i class="iconfont icon-zhekou"></i>超值折扣</a></li>
+			<li><a href="#"><i class="iconfont icon-xianshigou-shou"></i>9点限时闪购</a></li>
+			<li><a href="#"><i class="iconfont icon-dianhua"></i>400－664－6698</a></li>
+		</ul>		
+		<p class="footerLink">
+			<a href="#">关于魅力惠</a>
+			<a href="#">加入我们</a>
+			<a href="#">联系我们</a>
+			<a href="#">使用帮助</a>
+			<a href="#">使用规则</a>
+			<a href="#">隐私声明</a>
+			<a href="#">网站地图</a>
+		</p>
+		<p class="copyright">
+			<span>COPYRIGHT©2016  杭州魅俪信息技术有限公司版权所有</span>
+			<span>浙ICP备16004860号-1</span>
+		</p>
+		<p class="imgcoin"><img src="img/icon_badge.png" alt="图片" /></p>
+	</div>
+</div>
+
+</body>
 </html>
+<!--<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>-->
+<script type="text/javascript">
+window.onload = function(){
+		var divs = document.getElementById("background").children;
+	//隐藏获取所有的tabControlBoxIn；
+	for(var i=0;i<2;i++){
+		divs[i].style.display="none";
+	}
+	divs[0].style.display = "block";
+	
+	}
+function show(ord){
+	//获取所有的tabControlBoxIn
+	var divs = document.getElementById("background").children;
+	//隐藏获取所有的tabControlBoxIn；
+	for(var i=0;i<2;i++){
+		divs[i].style.display="none";
+	}
+	//显示当前tabControlBoxIn
+	divs[ord-1].style.display = "block";
+	document.getElementById("bottomline").style.left=(ord-1)*90+"px";
+	
+}
+</script>
+
