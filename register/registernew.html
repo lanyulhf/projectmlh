@@ -18,11 +18,12 @@
 	</div>
 </div>
 <div id="background">
-	
 	<div id="regin">
 		<div id="reginIn">
-			<span  class="phone" onclick="show(1)">手机登陆</span><span class="userName" onclick="show(2)">账户登录</span>
-		<input id="phoneNum" type="text" placeholder="请输入手机号码">
+		<span  id="phone" onclick="show(1)">手机登陆</span><span id="userName" onclick="show(2)">账户登录</span>	
+		<div id="changeCon">
+			<div style="display:block">
+			<input id="phoneNum" type="text" placeholder="请输入手机号码">
 		<p id="check">
 			<input id="checkNum" type="text" placeholder="请输入验证码">
 			<a href="#" id="checkBtn">获取验证码</a>
@@ -43,11 +44,8 @@
 				<a href="#"><i class="iconfont icon-weibo"></i></a>
 			</p>
 		</div>
-	</div>
-</div>
-<div id="regin">
-		<div id="reginIn">
-			<span class="phone" onclick="show(1)">手机登陆</span><span class=".userName" onclick="show(2)">账户登录</span>
+		</div>	
+		<div id="changeCon" style="display:block">
 		<input id="phoneNum" type="text" placeholder="请输入手机号码">
 		<p id="check">
 			<input id="checkPassword" type="text" placeholder="请输入密码">
@@ -68,8 +66,15 @@
 				<a href="#"><i class="iconfont icon-weibo"></i></a>
 			</p>
 		</div>
+				
+		</div>
+			
+		</div>	
+		
+		
 	</div>
 </div>
+
 </div>
 <div id="footer">
 	<div id="footerIn">
@@ -103,7 +108,7 @@
 <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 <script type="text/javascript">
 window.onload = function(){
-		var divs = document.getElementById("background").children;
+	var divs = document.getElementById("changeCon").children;
 	//隐藏获取所有的tabControlBoxIn；
 	for(var i=0;i<2;i++){
 		divs[i].style.display="none";
@@ -113,17 +118,19 @@ window.onload = function(){
 	}
 function show(ord){
 	//获取所有的tabControlBoxIn
-	var divs = document.getElementById("background").children;
+	var divs = document.getElementById("changeCon").children;
 	//隐藏获取所有的tabControlBoxIn；
 	for(var i=0;i<2;i++){
 		divs[i].style.display="none";
+//		this.style.cssText="background: #ccc";
 	}
 	//显示当前tabControlBoxIn
 	divs[ord-1].style.display = "block";
+	
 	if(ord==1){
-		$(".userName").removeClass().addClass("phone");
+		$("#userName").cssText=" background: #ccc";
 	}else{
-		$(".phone").removeClass().addClass("userName");	
+//		$("#phone").removeClass().addClass("userName");	
 	}
 //	document.getElementById("userName").style.cssText = "background:#eeeeee;border-top:3px solid red;";
 	/*color:red;

@@ -115,10 +115,10 @@ img {
             font-size: 16px;
             cursor: pointer;
         }
-    .userName{
+    #userName{
          background: #eee; 
     } 
-      .phone{
+      #phone{
           color:red;
            background: #fff;
            border-top:3px solid red;
@@ -170,12 +170,12 @@ img {
             margin-left:150px;
         }
          #checkBtn{
-            width:100px;
-            height:50px;
-            float:left;
-            text-align:center;
-           margin-right:25px;
-            margin-bottom: 30px;    
+    width:100px;
+    height:50px;
+    float:left;
+    text-align:center;
+   margin-right:25px;
+    margin-bottom: 30px;    
       line-height: 48px;
     text-align: center;
     background: #dd2828;
@@ -187,12 +187,12 @@ img {
         }
         }
         #login{
-            clear:both;
-            width: 300px;
-            height: 50px;
-            display: block;
-            background-color: #222;
-            color:white;
+    clear:both;
+    width: 300px;
+    height: 50px;
+    display: block;
+    background-color: #222;
+    color:white;
     line-height: 50px;
     font-size: 16px;
     cursor: pointer;
