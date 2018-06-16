@@ -20,7 +20,7 @@
 <div id="background">
 	<div id="regin">
 		<div id="reginIn">
-		<span  id="phone" onclick="show(1)">手机登陆</span><span id="userName" onclick="show(2)">账户登录</span>	
+		<span id="phone" onclick="show(1)">手机登陆</span><span id="userName" onclick="show(2)">账户登录</span>	
 		<div id="changeCon">
 			<div style="display:block">
 			<input id="phoneNum" type="text" placeholder="请输入手机号码">
@@ -127,11 +127,13 @@ function show(ord){
 	//显示当前tabControlBoxIn
 	divs[ord-1].style.display = "block";
 	
-	if(ord==1){
-		$("#userName").cssText=" background: #ccc";
+	/*if(ord==1){
+		$("#userName").style.cssText="background:#ccc";
+		$("#phone").style.cssText="color:red;background: #fff;border-top:3px solid red;";
 	}else{
-//		$("#phone").removeClass().addClass("userName");	
-	}
+		$("#userName").style.cssText="color:red;background: #fff;border-top:3px solid red;";	
+		$("#phone").style.cssText="background:#ccc";
+	}*/
 //	document.getElementById("userName").style.cssText = "background:#eeeeee;border-top:3px solid red;";
 	/*color:red;
     background: #fff;

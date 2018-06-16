@@ -75,15 +75,21 @@ img {
 }
 .headerBotInLeft{
   li{
-      float: left; 
+      float: left;
+      width:260px;
+      height:90px; 
   }
-}
-.headerBotInRight{
-    padding-top:25px;
-    float:right;
-    margin-right:63px;
+  li:nth-child(1){
+      a{
+//        display:block;
+          width:260px;
+          height:90px;
+          margin-top:-90px;
+      }
+  }
   
 }
+
 
 //background
 #background{
