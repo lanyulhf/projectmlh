@@ -576,6 +576,8 @@ img {
             }
         }   
          .purchaseTime{
+             margin-top:50px;
+
             .leftInfo{
                 padding: 8px 0;
                 font-weight: bold;
@@ -606,17 +608,252 @@ img {
                 span{
                     display: inline-block;
                     line-height: 48px;
-                    vertical-align: top;
-                    
+                    vertical-align: top;                  
                 }
-            } 
+            }            
          } 
+          
          .bottomInfo{
+          padding-top:30px; 
+                        
              clear:both;
              width:480px;
-             background: red;
              line-height:54px;
-         }               
+             height:54px;
+            color:black;
+             span:nth-child(1){
+                 display: inline-block;
+                 text-indent:24px;
+                 width: 138px;                   
+                 background:url(../img/icon_real100.png) no-repeat 0px 20px;
+             }
+             span:nth-child(2){
+                 display: inline-block;
+                
+                 text-indent:24px;  
+                 width: 138px;  
+                 background:url(../img/icon_7daysrma.png) no-repeat 0px 20px;
+             }
+         }  
+          
+                      
+        }
+    }  
+    //详细介绍,表格部分
+    .detailedness{
+        width:990px;
+        border-top:1px solid #afafaf;
+        padding-top:48px;
+        margin:0 auto;
+        .detailednessOne{
+              text-align: center;
+              font-size:24px;
+              font-weight:600px;
+              p{
+                  height:20px;
+              }
+              p:nth-child(1){
+                line-height: 28px;
+                font-size: 18px;
+                letter-spacing: 4px;
+            }
+            p:nth-child(2){
+                line-height: 28px;
+                font-size: 18px;
+                letter-spacing: 4px;
+            } 
+            p:nth-child(3){
+                font-size: 14px;
+                color: #929292;
+                line-height: 24px;
+            }
+            p:nth-child(4) a{    
+                font-size: 14px;
+                text-decoration: underline;
+                float:right;
+            }
+            .infoTable{
+                height:320px;
+                padding-bottom:60px;
+                .tabLeft{      
+                        float:left;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: #000;
+                        th{
+                             width:120px;
+                             height:51px;
+                             border-bottom: 1px solid white;
+                        }
+                       
+                }
+                .taRight{
+                    float:left;
+                    font-size: 14px;
+                    background-color: #000;
+                    td{
+                       border:none;
+                         width:172px;
+                         height:51px;
+                         text-align:center;
+                         background-color: #e7e7e7;
+                    }
+                       
+                }
+            }                  
+        }
+        .detailednessTwo{
+              text-align: center;
+              font-size:24px;
+              font-weight:600px;
+              p{
+                  height:20px;
+              }
+              p:nth-child(2){
+                line-height: 20px;
+                font-size: 16px;
+            }
+            p:nth-child(3){
+                line-height: 20px;
+                font-size: 12px;
+                color:#a3a3a3;
+            } 
+            .ulContent{ 
+                    margin-top:20px;            
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: #a3a3a3;
+                    overflow:hidden;
+                li{
+                    width: 320px;
+                    height: 30px;
+                    float: left;
+                    margin: 0 9px 26px 0;
+                    border-bottom: 1px solid #dadada;  
+                }
+                                
+            }
+            .alert{
+                width: 990px;
+                margin: 0 auto;
+                padding: 10px 0;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 500;
+                color: #a3a3a3;
+                text-align:left;
+            }
+            .state{
+               @extend .alert;
+            }
+            .imginfoBox{
+                width:1000px;
+                height:1380px;
+                
+                img{
+                    float:left;
+                }
+                img:nth-child(1){
+                    margin-right:20px;
+                }
+                img:nth-child(3){
+                    margin-right:20px;
+                }
+            }
+        }
+        .detailednessThree{
+              text-align: center;
+              font-size:24px;
+              font-weight:600px;
+              margin-bottom:80px;
+               p{
+                line-height: 24px;
+                font-size: 12px;
+                margin-top:30px;
+                text-align: left;
+                padding:0 40px;
+            } 
+            a{
+                display:inline-block;
+                width: 98px;
+                height: 34px;
+                line-height: 34px;
+                font-size: 14px;
+                background: black;
+                color:white;
+            }
+        }
+        .detailednessFour{
+//          margin-left:110px;
+           img{
+               width:990px;
+           }
+        }
+        .detailednessFive{
+
+              font-size:24px;
+              font-weight:600px;
+              h3{
+            text-align: center;
+                  
+              }
+              .fiveTil{                             
+            font-size:16px;
+            text-align: center;
+                  
+              }
+              .clothes{
+                 overflow: hidden;
+                  .clothesIn{
+                     
+                         float:left;
+                          padding: 18px 4px 10px;
+                         .pTit{
+                             line-height:18px;
+                              a{
+                               
+                               font-size: 14px;
+                               font-weight: 600; 
+                              }
+                               
+                          }
+                          .pCon{
+                              line-height:18px;
+                              a{
+                               color: #afafaf;
+                               font-size: 14px;
+                            
+                              }
+                               
+                          }
+                          .pConIn{
+                              line-height:18px;
+                              
+                               .sOne{
+                            padding-right:10px;
+                            color: #e63f34;
+                            font-size: 16px;
+                            font-weight: 600;  
+                          }
+                          .sTwo{
+                            padding-right:10px;
+                            color: #afafaf;
+                            font-size: 12px;
+                            text-decoration: line-through;  
+                          }
+                          .sTree{
+                              padding-left:50px;  
+                              font-size:12px;
+                              font-weight: 600; 
+                          }
+                          .sTree:hover{
+                              color:#e63f34;
+                          }
+                          }
+                         
+                          
+                  }
+              } 
         }
     }
   }
