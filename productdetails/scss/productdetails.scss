@@ -271,7 +271,7 @@ img {
         padding: 0px 0 20px 0;
         border-bottom: 1px solid #e7e7e7;
      .activesTime{
-         position:absolute;
+//    position:absolute;
        height:52px;
        li{
           padding-left:10px;
@@ -691,17 +691,17 @@ img {
                        
                 }
                 .taRight{
+                    background: none;
                     float:left;
                     font-size: 14px;
                     background-color: #000;
                     td{
-                       border:none;
+                        border:none;
                          width:172px;
                          height:51px;
                          text-align:center;
-                         background-color: #e7e7e7;
-                    }
-                       
+//                       background-color: #e7e7e7;
+                    }   
                 }
             }                  
         }

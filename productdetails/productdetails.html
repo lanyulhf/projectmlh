@@ -249,14 +249,14 @@
 		<div class="contentMain">
 			<!--图片区-->
 			<div class="conImg">
-				<div class="imgs"><img src="img/e7f87c6c8e4f1be5b0e544712d4c4b89.jpg" alt="" /></div>
+				<div id="imgs" class="imgs"><img id="bigImg" src="img/e7f87c6c8e4f1be5b0e544712d4c4b89.jpg" alt="" /></div>
 				<a href="#"></a>
 				<a href="#"></a>
-				<div class="smallImg">
-					<div class="smallImgIn"><img src="img/e7f87c6c8e4f1be573a0868f96990a8f.jpg" alt="图片" /></div>
-					<div class="smallImgIn"><img src="img/e7f87c6c8e4f1be5781bee62bbd22957.jpg" alt="图片" /></div>
-					<div class="smallImgIn"><img src="img/e7f87c6c8e4f1be58cc79ed31fc19b37.jpg" alt="图片" /></div>
-					<div class="smallImgIn"><img src="img/e7f87c6c8e4f1be58c394de07968ab25_003.jpg" alt="图片" /></div>
+				<div class="smallImg" >
+					<div class="smallImgIn"><img id="smallImg" src="img/e7f87c6c8e4f1be573a0868f96990a8f.jpg" alt="图片" /></div>
+					<div class="smallImgIn"><img id="smallImg" src="img/e7f87c6c8e4f1be5781bee62bbd22957.jpg" alt="图片" /></div>
+					<div class="smallImgIn"><img id="smallImg" src="img/e7f87c6c8e4f1be58cc79ed31fc19b37.jpg" alt="图片" /></div>
+					<div class="smallImgIn"><img id="smallImg" src="img/e7f87c6c8e4f1be58c394de07968ab25_003.jpg" alt="图片" /></div>
 				</div>
 			</div>
 			<!--详细信息区-->
@@ -468,7 +468,9 @@
 						</tr>
 					</table>
 					<table class="taRight" cellpadding="0" cellspacing="0">
-						<tr>
+						<tbody id="taRight" >
+							<tr>
+							
 							<td>0</td>
 							<td>1</td>
 							<td>2</td>
@@ -510,6 +512,9 @@
 							<td>165/92A</td>
 							<td>170/96A</td>
 						</tr>
+							
+						</tbody>
+						
 					</table>	
 				</div>
 			</div>
@@ -598,6 +603,7 @@
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -635,7 +641,6 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 <script type="text/javascript">
-
 window.onscroll = function(){
 		var _scroll = document.body.scrollTop || document.documentElement.scrollTop;
 		var nav = document.getElementById("nav");
@@ -651,36 +656,38 @@ window.onscroll = function(){
 
 </script>
 <script type="text/javascript">
-
-
-</script>
-<!--<script type="text/javascript">
-		window.onload = function(){
-		var divs = document.getElementById("tabControlBox").children;
-	//隐藏获取所有的tabControlBoxIn；
-	for(var i=0;i<5;i++){
-		divs[i].style.display="none";
-	}
-	divs[0].style.display = "block";	
-	}
-function show(ord){
-	//获取所有的span
-	var lis = document.getElementById("selectLi").children;
-	//所有的span
-	for(let i=0;i<5;i++){
-		lis[i][0].onclick = function(){
-			if(this.style.top==5){
-				this.style.top==-18;
-			}
-		}
-	}
-	//显示当前tabControlBoxIn
-	/*divs[ord-1].style.display = "block";
-	document.getElementById("bottomline").style.left=(ord-1)*90+"px";*/
-	
+ var originColor ="";
+function mouseHoverColor(){
+  var trs=document.getElementById("taRight").children;
+  for(var i=0;i<trs.length;i++){
+    trs[i].onmouseover = function(){
+      originColor = this.style.backgroundColor;
+      //改成天蓝色
+      this.style.backgroundColor = "skyblue";
+    }
+    trs[i].onmouseout = function(){
+      this.style.backgroundColor = originColor;
+    }
+  }
 }
-</script>-->
-<script type="text/javascript" src="js/jquery-1.11.3.js">	
+function myColor(){
+  var trs=document.getElementById("taRight").children;
+  for(var i=0;i<trs.length;i++){
+    if(i%2==0){
+      trs[i].style.backgroundColor = "#e7e7e7";
+    }else{
+      trs[i].style.backgroundColor = "#fff";
+    }
+  }
+}
+
+window.onload = function(){
+  myColor();
+  mouseHoverColor();
+
+}
+
 </script>
+
 
 
