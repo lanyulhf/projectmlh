@@ -26,11 +26,16 @@ gulp.task("images",function(){
 	gulp.src("img/*.{jpg,png,gif}")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\productdetails\\img"));
 });
+//复制sass下的font css
 gulp.task("copycss",function(){
 	gulp.src("scss/*.css")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\productdetails\\css"));
 });
-
+//复制font文件夹
+gulp.task("copyfont",function(){
+	gulp.src("*.*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\productdetails"));
+});
 //合并文件
 gulp.task("concatjs",function(){
 	gulp.src(["js/index.js","js/goodslist.js"])
@@ -71,7 +76,8 @@ gulp.task("watchall",function(){
 	gulp.watch("img/*.{jpg,png,gif}",["images"]);
 	gulp.watch(["js/index.js","js/goodslist.js"],["concatanduglifyandrenamejs"]);
 	gulp.watch("js/*.js",["copyjs"]);
-	
+	gulp.watch("*.*",["copyfont"]);
+	gulp.watch("scss/*.css",["copycss"]);
 });
 
 

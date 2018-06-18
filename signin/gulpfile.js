@@ -26,7 +26,16 @@ gulp.task("images",function(){
 	gulp.src("img/*.{jpg,png,gif}")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\signin\\img"));
 });
-
+//复制font文件夹
+gulp.task("copyfont",function(){
+	gulp.src("*.*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\signin"));
+});
+//复制fontcss文件夹
+gulp.task("copycss",function(){
+	gulp.src("scss/*.css")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\signin\\css"));
+});
 //合并文件
 gulp.task("concatjs",function(){
 	gulp.src(["js/index.js","js/goodslist.js"])
@@ -63,11 +72,11 @@ gulp.task("concatanduglifyandrenamejs",function(){
 gulp.task("watchall",function(){
 	gulp.watch("scss/*.scss",["sassfile"]);
 	gulp.watch("*.html",["copyhtml"]);
-
 	gulp.watch("img/*.{jpg,png,gif}",["images"]);
 	gulp.watch(["js/index.js","js/goodslist.js"],["concatanduglifyandrenamejs"]);
 	gulp.watch("js/*.js",["copyjs"]);
-	
+	gulp.watch("*.*",["copyfont"]);
+	gulp.watch("scss/*.css",["copycss"]);
 });
 
 
