@@ -20,7 +20,7 @@
 <div id="background">
 	<div id="regin">
 		<div id="reginIn">
-		<span id="phone" onclick="show(1)">手机登陆</span><span id="userName" onclick="show(2)">账户登录</span>	
+		<span id="phone" onclick="show(1)">手机登录</span><span id="userName" onclick="show(2)">账户登录</span>	
 		<div id="changeCon">
 			<div style="display:block">
 			<input id="phoneNum" type="text" placeholder="请输入手机号码">
@@ -35,8 +35,7 @@
 			<div class="graybg"></div>
 			<h3>其他支付方式</h3>
 			<div class="graybg"></div>
-			</div>
-			
+			</div>			
 			<p id="link">
 				<a href="#"><img src="img/tao.png" alt="图片" /></i></a>
 				<a href="#"><i class="iconfont icon-zhifubao"></i></a>
@@ -108,36 +107,29 @@
 <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
 <script type="text/javascript">
 window.onload = function(){
+	initUI();
+	show(ord);
+}
+	var regSpan=document.getElementById("reginIn").children;
 	var divs = document.getElementById("changeCon").children;
-	//隐藏获取所有的tabControlBoxIn；
-	for(var i=0;i<2;i++){
-		divs[i].style.display="none";
-	}
-	divs[0].style.display = "block";
 	
-	}
+	divs[ord-1].style.display = "block";
 function show(ord){
-	//获取所有的tabControlBoxIn
-	var divs = document.getElementById("changeCon").children;
-	//隐藏获取所有的tabControlBoxIn；
 	for(var i=0;i<2;i++){
 		divs[i].style.display="none";
-//		this.style.cssText="background: #ccc";
+		regSpan[i].style.cssText="background:#eee;border-top:0px solid red;";
+	}	
+	divs[ord-1].style.display = "block";
+	regSpan[ord-1].style.cssText="background:#fff;border-top:3px solid red;";
+	
+}
+function initUI(){
+	for(var i=0;i<2;i++){
+		divs[i].style.display="none";
+		regSpan[0].style.cssText="background:#fff;border-top:3px solid red;";
 	}
 	//显示当前tabControlBoxIn
-	divs[ord-1].style.display = "block";
-	
-	/*if(ord==1){
-		$("#userName").style.cssText="background:#ccc";
-		$("#phone").style.cssText="color:red;background: #fff;border-top:3px solid red;";
-	}else{
-		$("#userName").style.cssText="color:red;background: #fff;border-top:3px solid red;";	
-		$("#phone").style.cssText="background:#ccc";
-	}*/
-//	document.getElementById("userName").style.cssText = "background:#eeeeee;border-top:3px solid red;";
-	/*color:red;
-    background: #fff;
-    border-top:3px solid red;*/
+	divs[0].style.display = "block";
 }
 
 </script>
