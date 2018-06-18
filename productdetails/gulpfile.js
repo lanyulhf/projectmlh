@@ -26,6 +26,10 @@ gulp.task("images",function(){
 	gulp.src("img/*.{jpg,png,gif}")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\productdetails\\img"));
 });
+gulp.task("copycss",function(){
+	gulp.src("scss/*.css")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\projectmlh\\productdetails\\css"));
+});
 
 //合并文件
 gulp.task("concatjs",function(){
