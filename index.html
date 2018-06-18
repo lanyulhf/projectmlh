@@ -5,6 +5,8 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper-4.3.2.min.css"/>
+	
 </head>
 <body>
 <!--headerTop-->
@@ -241,7 +243,19 @@
 <!--banner-->
 <div id="banner">
 	<div id="bannerIn">	
-		
+		<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/d564a398ce44e0de84c62f7e9821cff725aecd78fee7fcaf.jpg " alt=""></div>
+        <div class="swiper-slide" ><img src="img/d564a398ce44e0de84c62f7e9821cff725aecd78fee7fcaf.jpg " alt=""></div>
+        <div class="swiper-slide" ><img src="img/d564a398ce44e0dec0a30629d0bf20191ac47f6e1a03bdfe.jpg " alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>   
+</div>
 	</div>
 </div>
 <!--content-->
@@ -2207,13 +2221,36 @@
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
-<script type="text/javascript" src="js/sea.js" ></script>
+<script src="js/swiper-4.3.2.min.js"></script>
+<script>
+	// window.onload = function(){
+		 var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    //自动播放
+    autoplay: {
+    delay: 1000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+ 
+   
+  })    
+	// }
+	   
+</script>
 <script type="text/javascript">
-	seajs.use("slidecmd",function(slider){
-	let hrefs = ["http://www.baidu.com","http://www.1000phone.com","http://www.taobao.com","http://www.jd.com","http://www.4399.com"];
-	let imgs = ["img/d564a398ce44e0de84c62f7e9821cff725aecd78fee7fcaf.jpg","img/d5a45f3b53efcc4be51838962e014bf6dc0bc45b7bb6d783.jpg","img/d564a398ce44e0de367d519fbe32fc70071407a2f321be85.jpg"];
-	let s = new slider.Slider("bannerIn",1340,254, imgs,hrefs,3000);
-});
 window.onscroll = function(){
 		var nav = document.getElementById("nav");
 		var _scroll = document.body.scrollTop || document.documentElement.scrollTop;
