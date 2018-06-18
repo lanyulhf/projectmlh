@@ -81,8 +81,7 @@ img {
     padding-top:25px;
     float:right;
     margin-right:63px;
-   
-    
+      
 }
 
 //background
@@ -92,16 +91,17 @@ img {
             background-size:100% ;
             background: url(../img/bgpic.jpg) center 0px / 1920px 802px no-repeat;
         #regin{
+            
             margin:0 auto;
             width:1000px;
-            height:800px;
             padding:60px;
-            #reginIn{
+            #reginIn{ 
+                              
               h3{
-      text-align: center;
-     height: 38px;
-     line-height: 38px;
-     font-size: 16px;
+              text-align: center;
+             height: 38px;
+             line-height: 38px;
+             font-size: 16px;
               };
               h3:nth-child(2){
                   height: 20px;
@@ -112,7 +112,7 @@ img {
                 } 
               }
             width:350px;
-            height:430px;
+            height:460px;
             overflow:hidden;
             background: #fff;
            float: right;
@@ -120,25 +120,34 @@ img {
         #phoneNum{
             clear:both;
             width:300px;
-            height:48px;
+            height:42px;
             margin-left:25px;
-            margin-bottom: 14px;
-            margin-top:20px;
+            margin-bottom: 14px;          
             outline:none;
+        }
+        #phoneNumOne{
+            clear:both;
+            width:300px;
+            height:42px;
+            margin-left:25px;
+            margin-bottom: 14px;          
+            outline:none;
+            margin-top:20px;
         }
         #check{
             
               #checkNum{
             width:190px;
-            height:48px;
+            height:42px;
             float:left;
             margin-left:25px;
             outline:none;
             margin-bottom:14px;
         }
+        
             #checkPassword{
             width:300px;
-            height:48px;
+            height:42px;
             float:left;
             margin-left:25px;
             outline:none;
@@ -165,20 +174,34 @@ img {
         }
          #checkBtn{
             width:100px;
-            height:50px;
+            height:46px;
             float:left;
             text-align:center;
-           margin-right:25px;
-            margin-bottom: 30px;    
-      line-height: 48px;
-    text-align: center;
-    background: #dd2828;
-    color: #fff;
-    font-size: 14px;
-    float: right;
-    cursor: pointer;
+           margin-right:25px;               
+            line-height: 46px;
+            text-align: center;
+            background: #dd2828;
+            color: #fff;
+            font-size: 14px;
+            float: right;
+            cursor: pointer;
             
         }
+        }
+        .items{
+            width:300px;        
+            clear:both;
+            margin-left:20px;
+            margin-bottom:10px; 
+            font-size:14px;
+            .checkName{
+                display:inline-block;
+                width: 12px;
+                height: 12px;
+            }
+            a{
+                display:inline-block;
+            }
         }
         #login{
             clear:both;
@@ -193,13 +216,13 @@ img {
      margin-left:25px;
         }
         #reg{
-            width:70px;
+            width:120px;
             height:20px;
-    text-align: center;
-  margin-right:8px;
-  margin-top:12px;
-    float:right;
-    color:red;
+            text-align: center;
+          margin-right:8px;
+          margin-top:12px;
+            float:right;
+            color:red;
     a{
             font-size: 12px;
             font-weight:100;
@@ -213,7 +236,7 @@ img {
             border: 4px solid #fff;
             border-left-color: red;
             float:left;
-            margin-top:3px;
+            margin-top:15px;
         }
         
         }
