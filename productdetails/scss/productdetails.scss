@@ -261,6 +261,7 @@ img {
 }
 //content
 .content{
+      position:relative;
     font-size:12px;
     width:100%;
     .contentIn{
@@ -270,6 +271,7 @@ img {
         padding: 0px 0 20px 0;
         border-bottom: 1px solid #e7e7e7;
      .activesTime{
+         position:absolute;
        height:52px;
        li{
           padding-left:10px;
@@ -508,7 +510,8 @@ img {
            li:hover .sizeTopBox{
                 display:block;             
            } 
-         }                    
+         } 
+         //此处结束                   
         .choseCount{
             width:360px;
             height:65px;
